@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ThongTinHTTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ThongTinHTTConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsApplication2.My.MySettings.GlobalReference.Default.ThongTinHTTConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CSDIEN" msprop:Generator_TableClassName="CSDIENDataTable" msprop:Generator_TableVarName="tableCSDIEN" msprop:Generator_RowChangedName="CSDIENRowChanged" msprop:Generator_TablePropName="CSDIEN" msprop:Generator_RowDeletingName="CSDIENRowDeleting" msprop:Generator_RowChangingName="CSDIENRowChanging" msprop:Generator_RowEvHandlerName="CSDIENRowChangeEventHandler" msprop:Generator_RowDeletedName="CSDIENRowDeleted" msprop:Generator_RowClassName="CSDIENRow" msprop:Generator_UserTableName="CSDIEN" msprop:Generator_RowEvArgName="CSDIENRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MAHD" msprop:Generator_ColumnVarNameInTable="columnMAHD" msprop:Generator_ColumnPropNameInRow="MAHD" msprop:Generator_ColumnPropNameInTable="MAHDColumn" msprop:Generator_UserColumnName="MAHD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAKH" msprop:Generator_ColumnVarNameInTable="columnMAKH" msprop:Generator_ColumnPropNameInRow="MAKH" msprop:Generator_ColumnPropNameInTable="MAKHColumn" msprop:Generator_UserColumnName="MAKH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MATH" msprop:Generator_ColumnVarNameInTable="columnMATH" msprop:Generator_ColumnPropNameInRow="MATH" msprop:Generator_ColumnPropNameInTable="MATHColumn" msprop:Generator_UserColumnName="MATH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CSCU" msprop:Generator_ColumnVarNameInTable="columnCSCU" msprop:Generator_ColumnPropNameInRow="CSCU" msprop:Generator_ColumnPropNameInTable="CSCUColumn" msprop:Generator_UserColumnName="CSCU">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CSMOI" msprop:Generator_ColumnVarNameInTable="columnCSMOI" msprop:Generator_ColumnPropNameInRow="CSMOI" msprop:Generator_ColumnPropNameInTable="CSMOIColumn" msprop:Generator_UserColumnName="CSMOI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LOAIDIEN" msprop:Generator_ColumnVarNameInTable="columnLOAIDIEN" msprop:Generator_ColumnPropNameInRow="LOAIDIEN" msprop:Generator_ColumnPropNameInTable="LOAIDIENColumn" msprop:Generator_UserColumnName="LOAIDIEN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIEN" msprop:Generator_ColumnVarNameInTable="columnTIEN" msprop:Generator_ColumnPropNameInRow="TIEN" msprop:Generator_ColumnPropNameInTable="TIENColumn" msprop:Generator_UserColumnName="TIEN" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HTT" msprop:Generator_TableClassName="HTTDataTable" msprop:Generator_TableVarName="tableHTT" msprop:Generator_RowChangedName="HTTRowChanged" msprop:Generator_TablePropName="HTT" msprop:Generator_RowDeletingName="HTTRowDeleting" msprop:Generator_RowChangingName="HTTRowChanging" msprop:Generator_RowEvHandlerName="HTTRowChangeEventHandler" msprop:Generator_RowDeletedName="HTTRowDeleted" msprop:Generator_RowClassName="HTTRow" msprop:Generator_UserTableName="HTT" msprop:Generator_RowEvArgName="HTTRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MAKH" msprop:Generator_ColumnVarNameInTable="columnMAKH" msprop:Generator_ColumnPropNameInRow="MAKH" msprop:Generator_ColumnPropNameInTable="MAKHColumn" msprop:Generator_UserColumnName="MAKH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TENKH" msprop:Generator_ColumnVarNameInTable="columnTENKH" msprop:Generator_ColumnPropNameInRow="TENKH" msprop:Generator_ColumnPropNameInTable="TENKHColumn" msprop:Generator_UserColumnName="TENKH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CMND" msprop:Generator_ColumnVarNameInTable="columnCMND" msprop:Generator_ColumnPropNameInRow="CMND" msprop:Generator_ColumnPropNameInTable="CMNDColumn" msprop:Generator_UserColumnName="CMND">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIACHI" msprop:Generator_ColumnVarNameInTable="columnDIACHI" msprop:Generator_ColumnPropNameInRow="DIACHI" msprop:Generator_ColumnPropNameInTable="DIACHIColumn" msprop:Generator_UserColumnName="DIACHI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GIOITINH" msprop:Generator_ColumnVarNameInTable="columnGIOITINH" msprop:Generator_ColumnPropNameInRow="GIOITINH" msprop:Generator_ColumnPropNameInTable="GIOITINHColumn" msprop:Generator_UserColumnName="GIOITINH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NGAYSINH" msprop:Generator_ColumnVarNameInTable="columnNGAYSINH" msprop:Generator_ColumnPropNameInRow="NGAYSINH" msprop:Generator_ColumnPropNameInTable="NGAYSINHColumn" msprop:Generator_UserColumnName="NGAYSINH" type="xs:dateTime" />
+              <xs:element name="SDT" msprop:Generator_ColumnVarNameInTable="columnSDT" msprop:Generator_ColumnPropNameInRow="SDT" msprop:Generator_ColumnPropNameInTable="SDTColumn" msprop:Generator_UserColumnName="SDT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NGAYDK" msprop:Generator_ColumnVarNameInTable="columnNGAYDK" msprop:Generator_ColumnPropNameInRow="NGAYDK" msprop:Generator_ColumnPropNameInTable="NGAYDKColumn" msprop:Generator_UserColumnName="NGAYDK" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CSDIEN" />
+      <xs:field xpath="mstns:MAHD" />
+    </xs:unique>
+    <xs:unique name="HTT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:HTT" />
+      <xs:field xpath="mstns:MAKH" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__CSDIEN__MAKH__0A9D95DB" msdata:parent="HTT" msdata:child="CSDIEN" msdata:parentkey="MAKH" msdata:childkey="MAKH" msprop:Generator_UserChildTable="CSDIEN" msprop:Generator_ChildPropName="GetCSDIENRows" msprop:Generator_UserRelationName="FK__CSDIEN__MAKH__0A9D95DB" msprop:Generator_ParentPropName="HTTRow" msprop:Generator_RelationVarName="relationFK__CSDIEN__MAKH__0A9D95DB" msprop:Generator_UserParentTable="HTT" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
