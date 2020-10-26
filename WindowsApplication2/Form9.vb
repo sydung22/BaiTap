@@ -132,6 +132,7 @@ Public Class Form9
         DUNG12_TB3.Text = ""
         DUNG12_TB4.Text = ""
         DUNG12_TB5.Text = ""
+        DUNG12_TB6.Text = ""
     End Sub
 
     Private Sub DUNG12_BT2_Click(sender As Object, e As EventArgs) Handles DUNG12_BT2.Click
@@ -192,9 +193,9 @@ Public Class Form9
             Dim rp As New CrystalReport2
             rp.Database.Tables("CSDIEN").SetDataSource(ds)
             rp.Database.Tables("HTT").SetDataSource(ds)
-            Formshow.CrystalReportViewer1.ReportSource = rp
-            Formshow.CrystalReportViewer1.Refresh()
-            Formshow.ShowDialog()
+            ReportHD.CrystalReportViewer1.ReportSource = rp
+            ReportHD.CrystalReportViewer1.Refresh()
+            ReportHD.ShowDialog()
             rp.Dispose()
             rp.Close()
         Catch ex As Exception

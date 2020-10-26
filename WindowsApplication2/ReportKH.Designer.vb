@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Formshow
+Partial Class ReportKH
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class Formshow
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.CrystalReport21 = New WindowsApplication2.CrystalReport2()
+        Me.CrystalReport31 = New WindowsApplication2.CrystalReport3()
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -34,22 +34,22 @@ Partial Class Formshow
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.CrystalReport21
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(703, 480)
+        Me.CrystalReportViewer1.ReportSource = Me.CrystalReport31
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1475, 712)
         Me.CrystalReportViewer1.TabIndex = 0
         '
-        'Formshow
+        'ReportKH
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(703, 480)
+        Me.ClientSize = New System.Drawing.Size(1475, 712)
         Me.Controls.Add(Me.CrystalReportViewer1)
-        Me.Name = "Formshow"
-        Me.Text = "Formshow"
+        Me.Name = "ReportKH"
+        Me.Text = "ReportKH"
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents CrystalReport21 As CrystalReport2
+    Friend WithEvents CrystalReport31 As CrystalReport3
 End Class

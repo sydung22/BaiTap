@@ -1,11 +1,12 @@
-﻿Public Class Form2
+﻿Imports System.Data.SqlClient
+Public Class Form2
+    Private con As SqlConnection
     Private Sub ĐăngXuấtToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DUNG12_ĐX.Click
         Form1.Show()
         Me.Hide()
     End Sub
 
     Private Sub ThoátToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DUNG12_OUT.Click
-        MsgBox("Bạn đã thoát")
         Me.Close()
     End Sub
 
@@ -59,8 +60,8 @@
     End Sub
 
     Private Sub TreeView_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        DUNG_12_TV.Nodes.Clear()
-        DUNG_12_TV.ImageList = Me.anh
+        Dung_12_TV.Nodes.Clear()
+        Dung_12_TV.ImageList = Me.anh
         Dung_12_TV.ImageIndex = 2
         Dung_12_TV.SelectedImageIndex = 2
         Dung_12_TV.Nodes.Add("Quận Hải Châu")
@@ -100,8 +101,40 @@
         System.Diagnostics.Process.Start("https://www.evn.com.vn/c3/evn-va-khach-hang/Trung-tam-cham-soc-khach-hang-dien-luc-9-144.aspx")
     End Sub
 
-    Private Sub DanhSáchĐãNộpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DanhSáchĐãNộpToolStripMenuItem.Click
+    Private Sub DanhSáchĐãNộpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchKHToolStripMenuItem.Click
+        Form11.Show()
+        Me.Hide()
+    End Sub
+    Private Sub DUNG12_HĐ_Click(sender As Object, e As EventArgs) Handles DUNG12_HĐ.Click
+        Dim constring As String = "Data Source=NGUYENSYDUNG;Initial Catalog=ThongTinHTT;Integrated Security=True"
+        con = New SqlConnection(constring)
+        Dim cmd As New SqlCommand
+        Dim adp As New SqlDataAdapter
+        Dim ds As New DataTable
+        Dim sql As String
+        sql = "SELECT * FROM CSDIEN,HTT WHERE HTT.MAKH=CSDIEN.MAKH "
+        Try
+            con.Open()
+            cmd = New SqlCommand(sql, con)
+            adp = New SqlDataAdapter(cmd)
+            adp.Fill(ds)
+            Dim rp As New CrystalReport2
+            rp.Database.Tables("CSDIEN").SetDataSource(ds)
+            rp.Database.Tables("HTT").SetDataSource(ds)
+            ReportHD.CrystalReportViewer1.ReportSource = rp
+            ReportHD.CrystalReportViewer1.Refresh()
+            ReportHD.ShowDialog()
+            rp.Dispose()
+            rp.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+    End Sub
+
+    Private Sub TổngDoanhThuThángToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchHDToolStripMenuItem.Click
         Form10.Show()
         Me.Hide()
     End Sub
+
 End Class

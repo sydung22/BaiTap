@@ -34,8 +34,8 @@ Partial Class Form2
         Me.DUNG12_CSĐ = New System.Windows.Forms.ToolStripMenuItem()
         Me.DUNG12_HĐ = New System.Windows.Forms.ToolStripMenuItem()
         Me.TìmKiếmToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DanhSáchĐãNộpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TổngDoanhThuThángToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SearchKHToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SearchHDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiệnÍchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DUNG12_MT = New System.Windows.Forms.ToolStripMenuItem()
         Me.DUNG12_CAL = New System.Windows.Forms.ToolStripMenuItem()
@@ -113,7 +113,7 @@ Partial Class Form2
         '
         Me.DUNG12_KH.Image = Global.WindowsApplication2.My.Resources.Resources.icons8_people_48
         Me.DUNG12_KH.Name = "DUNG12_KH"
-        Me.DUNG12_KH.Size = New System.Drawing.Size(161, 26)
+        Me.DUNG12_KH.Size = New System.Drawing.Size(181, 26)
         Me.DUNG12_KH.Text = "Khách hàng"
         '
         'HóaĐơnToolStripMenuItem
@@ -121,44 +121,44 @@ Partial Class Form2
         Me.HóaĐơnToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DUNG12_CSĐ, Me.DUNG12_HĐ})
         Me.HóaĐơnToolStripMenuItem.Image = Global.WindowsApplication2.My.Resources.Resources.icons8_bill_48
         Me.HóaĐơnToolStripMenuItem.Name = "HóaĐơnToolStripMenuItem"
-        Me.HóaĐơnToolStripMenuItem.Size = New System.Drawing.Size(161, 26)
+        Me.HóaĐơnToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.HóaĐơnToolStripMenuItem.Text = "Hóa đơn"
         '
         'DUNG12_CSĐ
         '
         Me.DUNG12_CSĐ.Image = Global.WindowsApplication2.My.Resources.Resources.icons8_office_80
         Me.DUNG12_CSĐ.Name = "DUNG12_CSĐ"
-        Me.DUNG12_CSĐ.Size = New System.Drawing.Size(227, 26)
+        Me.DUNG12_CSĐ.Size = New System.Drawing.Size(225, 26)
         Me.DUNG12_CSĐ.Text = "Chỉ số điện"
         '
         'DUNG12_HĐ
         '
         Me.DUNG12_HĐ.Image = Global.WindowsApplication2.My.Resources.Resources.icons8_bill_64
         Me.DUNG12_HĐ.Name = "DUNG12_HĐ"
-        Me.DUNG12_HĐ.Size = New System.Drawing.Size(227, 26)
-        Me.DUNG12_HĐ.Text = "Hóa đơn / In hóa đơn"
+        Me.DUNG12_HĐ.Size = New System.Drawing.Size(225, 26)
+        Me.DUNG12_HĐ.Text = "In danh sách hóa đơn"
         '
         'TìmKiếmToolStripMenuItem
         '
-        Me.TìmKiếmToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DanhSáchĐãNộpToolStripMenuItem, Me.TổngDoanhThuThángToolStripMenuItem})
+        Me.TìmKiếmToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SearchKHToolStripMenuItem, Me.SearchHDToolStripMenuItem})
         Me.TìmKiếmToolStripMenuItem.Image = Global.WindowsApplication2.My.Resources.Resources.zoom
         Me.TìmKiếmToolStripMenuItem.Name = "TìmKiếmToolStripMenuItem"
         Me.TìmKiếmToolStripMenuItem.Size = New System.Drawing.Size(106, 24)
         Me.TìmKiếmToolStripMenuItem.Text = "Tìm kiếm "
         '
-        'DanhSáchĐãNộpToolStripMenuItem
+        'SearchKHToolStripMenuItem
         '
-        Me.DanhSáchĐãNộpToolStripMenuItem.Image = Global.WindowsApplication2.My.Resources.Resources.icons8_edit_property_48
-        Me.DanhSáchĐãNộpToolStripMenuItem.Name = "DanhSáchĐãNộpToolStripMenuItem"
-        Me.DanhSáchĐãNộpToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.DanhSáchĐãNộpToolStripMenuItem.Text = "Khách hàng"
+        Me.SearchKHToolStripMenuItem.Image = Global.WindowsApplication2.My.Resources.Resources.icons8_edit_property_48
+        Me.SearchKHToolStripMenuItem.Name = "SearchKHToolStripMenuItem"
+        Me.SearchKHToolStripMenuItem.Size = New System.Drawing.Size(161, 26)
+        Me.SearchKHToolStripMenuItem.Text = "Khách hàng"
         '
-        'TổngDoanhThuThángToolStripMenuItem
+        'SearchHDToolStripMenuItem
         '
-        Me.TổngDoanhThuThángToolStripMenuItem.Image = Global.WindowsApplication2.My.Resources.Resources.icons8_sigma_80
-        Me.TổngDoanhThuThángToolStripMenuItem.Name = "TổngDoanhThuThángToolStripMenuItem"
-        Me.TổngDoanhThuThángToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.TổngDoanhThuThángToolStripMenuItem.Text = "Hóa đơn"
+        Me.SearchHDToolStripMenuItem.Image = Global.WindowsApplication2.My.Resources.Resources.icons8_sigma_80
+        Me.SearchHDToolStripMenuItem.Name = "SearchHDToolStripMenuItem"
+        Me.SearchHDToolStripMenuItem.Size = New System.Drawing.Size(161, 26)
+        Me.SearchHDToolStripMenuItem.Text = "Hóa đơn"
         '
         'TiệnÍchToolStripMenuItem
         '
@@ -172,14 +172,14 @@ Partial Class Form2
         '
         Me.DUNG12_MT.Image = Global.WindowsApplication2.My.Resources.Resources.icons8_keypad_48
         Me.DUNG12_MT.Name = "DUNG12_MT"
-        Me.DUNG12_MT.Size = New System.Drawing.Size(141, 26)
+        Me.DUNG12_MT.Size = New System.Drawing.Size(181, 26)
         Me.DUNG12_MT.Text = "Máy tính"
         '
         'DUNG12_CAL
         '
         Me.DUNG12_CAL.Image = Global.WindowsApplication2.My.Resources.Resources.icons8_calendar_50
         Me.DUNG12_CAL.Name = "DUNG12_CAL"
-        Me.DUNG12_CAL.Size = New System.Drawing.Size(141, 26)
+        Me.DUNG12_CAL.Size = New System.Drawing.Size(181, 26)
         Me.DUNG12_CAL.Text = "Lịch"
         '
         'TrợGiúpToolStripMenuItem
@@ -447,8 +447,8 @@ Partial Class Form2
     Friend WithEvents DUNG12_CSĐ As ToolStripMenuItem
     Friend WithEvents DUNG12_HĐ As ToolStripMenuItem
     Friend WithEvents TìmKiếmToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DanhSáchĐãNộpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TổngDoanhThuThángToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SearchKHToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SearchHDToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TiệnÍchToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DUNG12_MT As ToolStripMenuItem
     Friend WithEvents DUNG12_CAL As ToolStripMenuItem

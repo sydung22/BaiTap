@@ -1,55 +1,4 @@
 ﻿
-'Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-' DUNG12_LV2.Items.Clear()
-'DUNG12_LV2.Columns.Add("STT", 40, HorizontalAlignment.Center)
-'DUNG12_LV2.Columns.Add("Mã khách hàng", 100, HorizontalAlignment.Center)
-'DUNG12_LV2.Columns.Add("Họ Tên", 120, HorizontalAlignment.Center)
-'DUNG12_LV2.Columns.Add("CMND", 100, HorizontalAlignment.Center)
-'DUNG12_LV2.Columns.Add("Địa chỉ", 200, HorizontalAlignment.Center)
-'DUNG12_LV2.Columns.Add("Giới tính", 100, HorizontalAlignment.Center)
-'DUNG12_LV2.Columns.Add("Ngày sinh", 100, HorizontalAlignment.Center)
-'DUNG12_LV2.Columns.Add("SĐT", 100, HorizontalAlignment.Center)
-'DUNG12_LV2.Columns.Add("Ngày đăng ký", 100, HorizontalAlignment.Center)
-'DUNG12_LV2.View = View.Details
-'End Sub
-
-' Private Sub Button1_Click(sender As Object, e As EventArgs) Handles DUNG12_BT1.Click
-'Dim it As ListViewItem
-'   it = New ListViewItem(11)
-'    it.SubItems.Add(DUNG12_TB1.Text)
-'    it.SubItems.Add(DUNG12_TB2.Text)
-'     it.SubItems.Add(DUNG12_TB3.Text)
-'     it.SubItems.Add(DUNG12_TB4.Text)
-' If (DUNG12_RDB2.Checked = True) Then
-'      it.SubItems.Add("Nữ")
-'Else
-'       it.SubItems.Add("Nam")
-'End If
-
-'   DUNG12_DTP1.CustomFormat = "dd-MM-yyyy"
-'  DUNG12_DTP2.CustomFormat = "dd-MM-yyyy"
-'  it.SubItems.Add(DUNG12_DTP1.Text)
-'  it.SubItems.Add(DUNG12_TB7.Text)
-'  it.SubItems.Add(DUNG12_DTP2.Text)
-'  DUNG12_LV2.Items.Add(it)
-'  MsgBox("Bạn đã thêm 1 khách hàng")
-'End Sub
-
-' Private Sub Button3_Click(sender As Object, e As EventArgs) Handles DUNG12_BT3.Click
-' For Each it In DUNG12_LV2.SelectedItems
-'       DUNG12_LV2.Items.Remove(it)
-'Next
-'     MsgBox("Bạn đã xóa thành công")
-'  End Sub
-
-'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles DUNG12_BT2.Click
-'   MsgBox("Bạn đã sửa thành công")
-' End Sub
-
-'Private Sub Button4_Click(sender As Object, e As EventArgs) Handles DUNG12_BT4.Click
-'    Form2.Show()
-'Me.Hide()
-' End Sub
 Imports System.Data.SqlClient
 Public Class Form3
     Private con As SqlConnection
@@ -170,5 +119,30 @@ Public Class Form3
     Private Sub DUNG12_BT4_Click(sender As Object, e As EventArgs) Handles DUNG12_BT4.Click
         Form2.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim constring As String = "Data Source=NGUYENSYDUNG;Initial Catalog=ThongTinHTT;Integrated Security=True"
+        con = New SqlConnection(constring)
+        Dim cmd As New SqlCommand
+        Dim adp As New SqlDataAdapter
+        Dim ds As New DataTable
+        Dim sql As String
+        sql = "SELECT * FROM HTT  "
+        Try
+            con.Open()
+            cmd = New SqlCommand(sql, con)
+            adp = New SqlDataAdapter(cmd)
+            adp.Fill(ds)
+            Dim rp As New CrystalReport3
+            rp.Database.Tables("HTT").SetDataSource(ds)
+            ReportKH.CrystalReportViewer1.ReportSource = rp
+            ReportKH.CrystalReportViewer1.Refresh()
+            ReportKH.ShowDialog()
+            rp.Dispose()
+            rp.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class
